@@ -1,0 +1,173 @@
+
+/* ================================
+   Login Page Styles
+   ================================ */
+
+.login-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Animated orbs background */
+.login-bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    background: radial-gradient(ellipse at center, #121212 0%, #050505 100%); /* Deep charcoal to black */
+}
+
+.login-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    animation: orbFloat 8s ease-in-out infinite;
+}
+.orb-1 {
+    width: 600px; height: 600px;
+    background: rgba(212, 175, 55, 0.15); /* Primary Gold */
+    top: -200px; left: -200px;
+    animation-delay: 0s;
+}
+.orb-2 {
+    width: 500px; height: 500px;
+    background: rgba(170, 140, 44, 0.15); /* Dark Gold */
+    bottom: -150px; right: -150px;
+    animation-delay: -3s;
+}
+.orb-3 {
+    width: 350px; height: 350px;
+    background: rgba(255, 255, 240, 0.1); /* Ivory Glow */
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    animation-delay: -5s;
+}
+@keyframes orbFloat {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-30px) scale(1.05); }
+}
+
+.login-container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 440px;
+    padding: 24px;
+}
+
+.login-card {
+    background: rgba(20, 20, 20, 0.85); /* Sleek dark glass */
+    backdrop-filter: blur(24px); /* Enhanced blur for a premium feel */
+    border: 1px solid rgba(212, 175, 55, 0.25); /* Subtle gold border */
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(212, 175, 55, 0.1) inset; /* Deep shadow with gold inset */
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.logo-icon {
+    font-size: 52px;
+    display: block;
+    margin-bottom: 12px;
+    animation: bookBounce 2s ease-in-out infinite;
+}
+@keyframes bookBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+.login-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    background: linear-gradient(135deg, #fffff0 0%, #d4af37 100%); /* Ivory to Gold Gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 6px;
+}
+
+.login-subtitle {
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.input-wrapper input {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.input-icon {
+    position: absolute;
+    left: 12px;
+    font-size: 16px;
+    pointer-events: none;
+    z-index: 1;
+}
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: var(--text-muted);
+    transition: color 0.2s;
+    padding: 4px;
+}
+.toggle-password:hover { color: var(--primary-light); }
+
+.btn-login {
+    width: 100%;
+    padding: 14px;
+    background: var(--grad-primary);
+    color: #111; /* Dark text for high contrast on the gold button */
+    border: none;
+    border-radius: var(--radius);
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 24px rgba(212, 175, 55, 0.4); /* Gold glow */
+    letter-spacing: 0.5px;
+}
+.btn-login:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(212, 175, 55, 0.5); /* Stronger gold glow */
+}
+.btn-login:active { transform: translateY(0); }
+
+.btn-spinner {
+    width: 18px; height: 18px;
+    border: 2px solid rgba(17, 17, 17, 0.3); /* Darkened to match the dark button text */
+    border-top-color: #111; /* Dark spinner head */
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.login-hint {
+    text-align: center;
+    margin-top: 16px;
+    font-size: 12px;
+    color: var(--text-muted);
+}
+.login-hint strong { color: var(--primary-light); }

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LibraryPro - Library Management System</title>
+    <meta name="description" content="A modern, full-featured Library Management System for managing books, members, and transactions." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/login.css" />
+</head>
+<body class="login-page">
+    <div class="login-bg">
+        <div class="login-orb orb-1"></div>
+        <div class="login-orb orb-2"></div>
+        <div class="login-orb orb-3"></div>
+    </div>
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <div class="logo-icon">📚</div>
+                <h1 class="login-title">LibraryPro</h1>
+                <p class="login-subtitle">Library Management System</p>
+            </div>
+            <form id="loginForm" class="login-form">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <div class="input-wrapper">
+                        <span class="input-icon">👤</span>
+                        <input type="text" id="username" name="username" placeholder="Enter username" required autocomplete="username" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="input-wrapper">
+                        <span class="input-icon">🔒</span>
+                        <input type="password" id="password" name="password" placeholder="Enter password" required autocomplete="current-password" />
+                        <button type="button" class="toggle-password" id="togglePassword">👁</button>
+                    </div>
+                </div>
+                <div id="loginError" class="error-message hidden"></div>
+                <button type="submit" class="btn-login" id="loginBtn">
+                    <span class="btn-text">Sign In</span>
+                    <span class="btn-spinner hidden"></span>
+                </button>
+                <p class="login-hint">Default: <strong>admin</strong> / <strong>admin123</strong></p>
+            </form>
+        </div>
+    </div>
+    <script src="js/api.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>
