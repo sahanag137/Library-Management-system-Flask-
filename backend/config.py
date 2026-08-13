@@ -1,6 +1,7 @@
 import os
 
 class Config:
+    FINE_PER_DAY = 5
     basedir = os.path.abspath(os.path.dirname(__file__))
     SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'library.db')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
